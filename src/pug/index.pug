@@ -7,6 +7,46 @@ html(lang="en")
 
         link(rel="stylesheet", href="styles.css")
 
-        title Document
+        title Startup
         
     body
+        header.hero
+            .hero__top
+                p.hero__logo Startup
+
+                .hero__nav
+                    include modules/_menu.pug
+
+                .menu-button
+                    .menu-button__middle
+
+            .hero__content
+                .hero-caption
+                    h1.hero-caption__title Welcome to startup
+                    p.hero-caption__subtitle Your favourite creative agency template
+                    .hero__button
+                        a.button(href="#") Get started
+
+        main
+            section.services#services
+
+
+            section.aboutus#aboutus
+
+
+            section.works#works
+
+
+            section.banner
+
+
+            section.blog#blog
+
+
+            section.clients#clients
+
+            
+            section.contact#contact
+
+
+            footer.footer
