@@ -255,14 +255,88 @@ html(lang="en")
 
 
             section.clients#clients
+                ul.clients__list
+                    li.clients__brand
+                        a.clients__item(href="#")
+                            img(src="", alt="")
+                    li.clients__brand
+                        a.clients__item(href="#")
+                            img(src="", alt="")
+                    li.clients__brand
+                        a.clients__item(href="#")
+                            img(src="", alt="")
+                    li.clients__brand
+                        a.clients__item(href="#")
+                            img(src="", alt="")
+                    li.clients__brand
+                        a.clients__item(href="#")
+                            img(src="", alt="")
+
                 .clients__slider
-                    .clients-slider
-                        .clients-slider__item
-                            ul.clients-slider__brands
-                                
+                    p.clients__text "Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum”
+                    p.clients__name John Doe, Google Inc.
+                    .clients__dots
+                        .clients__dots-item
+                        .clients__dots-item
+                        .clients__dots-item
 
 
             section.contact#contact
+                .contactus__header
+                    header.section-header
+                        h2.section-header__title Get in touch
+                        p.section-header__subtitle Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet
+
+                .contactus__content
+                    .contactus__data
+                        .contactus__data-item
+                            p.contactus__data-title Address
+                            p.contactus__data-content 312, 7th Ave, New York NY 101200, United States of America
+ 
+ 
+
+                        .contactus__data-item.contactus__data-item--hotline
+                            p.contactus__data-title Hotline (24x7)
+                            a.contactus__data-content(href="tel:+650052300") +65 0052 300
+                            a.contactus__data-content(href="tel:+6588251210") +65 88251 210
+                            a.contactus__data-content(href="tel:+8801723511340") +88 01723 511 340
+
+                        .contactus__data-item.contactus__data-item--email
+                            p.contactus__data-title E-mail
+                            p.contactus__data-content shapedtheme@gmail.com khalilkode@gmail.com
+
+                    .contactus__form
+                        form#contactus-form.form(action="")
+                            .contactus-form__content
+                                .contactus-form__group
+                                    input.contactus-form__input(type="text" name="fullname" placeholder="Your name" required pattern="^[A-z|А-я][a-z|а-я]{2,}$")
+                                    .contactus-form__check
+                                    input.contactus-form__input(type="text" name="subject" placeholder="Your subject" required pattern="^[A-z|А-я][a-z|а-я]{2,}$")
+                                    .contactus-form__check
+                                .contactus-form__group
+                                    input.contactus-form__input(type="email" name="email" placeholder="Your e-mail" required)
+                                    .contactus-form__check
+                                    input.contactus-form__input(type="text" name="company" placeholder="Your company")
+                                    .contactus-form__check
+                                input.contactus-form__input(type="text" name="message" placeholder="Your message" required)
+
+                            .contactus__footer
+                                .contactus__button
+                                    input.contactus-form__submit.button(type="button" value="Send messsage")
+                                p.contactus__details <span>*</span> We'll contact you as soon as possible. We don'treply on monday.
 
 
             footer.footer
+                .footer__content
+                    .footer__socials
+                        ul.socials
+                            li.socials__item
+                                a.socials__icon(href="").social-icon--twitter
+                            li.socials__item
+                                a.socials__icon(href="").social-icon--instagram
+                            li.socials__item
+                                a.socials__icon(href="").social-icon--facebook
+                            li.socials__item
+                                a.socials__icon(href="").social-icon--vk
+
+                    p.footer__copyright © 2020 Startup, Designed by ShapedTheme
