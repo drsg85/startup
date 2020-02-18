@@ -1,0 +1,24 @@
+.main-nav {
+
+}
+
+.main-nav__list {
+    // box model
+    display: flex;
+
+    // visual
+    list-style-type: none;
+}
+
+.main-nav__item a {
+    // box model
+    display: block;
+    margin-right: 30px;
+    
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    line-height: 24px;
+    font-size: 14px;
+    text-decoration: none;
+}

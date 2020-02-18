@@ -1,6 +1,35 @@
 .hero {
     // box model
+    height: 100vh;
+    max-height: 770px;
     padding-left: 230px;
     padding-right: 230px;
     padding-top: 40px;
+
+    // visual
+    background-color: #131313;
+    background-image: url('./img/hero.jpg');
+    background-repeat: no-repeat;
+}
+
+.hero__top {
+    // box model
+    display: flex;
+}
+
+.hero__logo {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-weight: 700;
+    line-height: 36px;
+    font-size: 24px;
+}
+
+.hero__nav {
+    // box model
+    margin-left: auto;
 }
