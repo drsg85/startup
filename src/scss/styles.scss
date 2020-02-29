@@ -10,7 +10,12 @@
 @import 'fonts/fonts';
 
 // modules
+@import 'modules/main-nav';
+@import 'modules/button';
+@import 'modules/section-header';
 
 // hero blocks
 @import 'modules/hero';
-@import 'modules/main-nav';
+@import 'modules/hero-caption';
+
+@import 'modules/services';

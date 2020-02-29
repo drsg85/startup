@@ -1,0 +1,15 @@
+.button {
+    // box model
+    display: inline-block;
+    padding: 15px 35px;
+    
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    // visual
+    border: 2px solid $light;
+    text-decoration: none;
+}

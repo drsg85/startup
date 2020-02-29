@@ -1,0 +1,78 @@
+.services {
+    // box model
+    padding: 100px 235px;
+}
+
+.services__header {
+    // box model
+    margin-bottom: 75px;
+}
+
+.services__content {
+    // box model
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.services__item {
+    // box model
+    max-width: 345px;
+
+    // typography
+    text-align: center;
+}
+
+.sevices__logo {
+    // box model
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    // visual
+    border: 2px solid rgba($grey, 0.2);
+    border-radius: 50%;
+
+    &--item-1 {
+        background-color: $red;
+        background-image: url('./img/letter.png');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    &--item-2 {
+        background-image: url('./img/symbol.png');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    &--item-3 {
+        background-image: url('./img/round.png');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+}
+
+.services__name {
+    // box model
+    margin: 0;
+    margin-bottom: 25px;
+
+    // typography
+    color: $grey;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.services__description {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.85rem;
+    line-height: 24px;
+}
