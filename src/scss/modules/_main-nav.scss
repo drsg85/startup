@@ -1,23 +1,70 @@
 .main-nav {
+    // positioning
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
+    // box model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // visual
+    background-color: $dark;
+
+    @include atDesktopS {
+        // positioning
+        position: relative;
+        
+        // box model
+        justify-content: flex-start;
+
+        // visual
+        background-color: transparent;
+    }
 }
 
 .main-nav__list {
     // box model
     display: flex;
+    flex-direction: column;
 
     // visual
     list-style-type: none;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+    }
 }
 
 .main-nav__item a {
     // box model
     display: block;
-    margin-right: 30px;
-    
+    margin: 20px;
+
     // typography
     color: $light;
     font-family: $titleFont;
-    font-size: 14px;
+    font-size: 1.3rem;
     text-decoration: none;
+
+    // visual
+    transition: all ease-in-out 0.2s;
+    
+    @include atDesktopS {
+        // box model
+        margin: 0;
+        margin-right: 30px;
+        
+        // typography
+        font-size: 0.85rem;
+    }
+}
+
+.main-nav__item a:hover {
+    // typography
+    color: $red;
 }

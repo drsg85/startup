@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
 
     @include atTablet {
-        
+
     }
 
     @include atDesktopM {
@@ -40,12 +40,55 @@
 }
 
 .hero__nav {
+    // positioning
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 777;
+
     // box model
-    margin-left: auto;
+    width: 100%;
+    max-width: 400px;
+
+    // visual
+    opacity: 0.9;
+    transition: all 0.3s ease-out;
 
     &--hidden {
+        // positioning
+        right: -110%;
+    }
+
+    @include atDesktopS {
+        // positioning
+        position: unset;
+        // top: 40px;
+        // left: 210px;
+
         // box model
-        display: none;
+        width: auto;
+        max-width: unset;
+        margin-left: auto;
+        
+        // visual
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @include atDesktopM {
+        // positioning
+        left: 260px;
+    }
+
+    @include atDesktopL {
+        // positioning
+        left: 320px;
+    }
+
+    @include atFullHD {
+        // positioning
+        left: 400px;
     }
 }
 

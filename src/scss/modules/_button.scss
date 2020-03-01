@@ -12,4 +12,10 @@
     // visual
     border: 2px solid $light;
     text-decoration: none;
+    transition: all ease-in-out 0.2s;
+}
+
+.button:hover {
+    // visual
+    background-color: $red;
 }
