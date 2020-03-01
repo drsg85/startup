@@ -1,6 +1,10 @@
 .services {
     // box model
-    padding: 70px 25px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 70px;
+
     @include atDesktopM {
         // box model
         padding: 100px 235px;
