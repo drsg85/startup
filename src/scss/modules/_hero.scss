@@ -2,14 +2,24 @@
     // box model
     height: 100vh;
     max-height: 770px;
-    padding-left: 230px;
-    padding-right: 230px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 40px;
 
     // visual
     background-color: #131313;
     background-image: url('./img/hero.jpg');
     background-repeat: no-repeat;
+
+    @include atTablet {
+        
+    }
+
+    @include atDesktopM {
+        // box model
+        padding-left: 230px;
+        padding-right: 230px;
+    }
 }
 
 .hero__top {
@@ -32,11 +42,21 @@
 .hero__nav {
     // box model
     margin-left: auto;
+
+    &--hidden {
+        // box model
+        display: none;
+    }
 }
 
 .hero__content {
     // box model
-    padding-top: 230px;
+    padding-top: 130px;
+
+    @include atDesktopS {
+        // box model
+        padding-top: 230px;
+    }
 }
 
 .hero__button {

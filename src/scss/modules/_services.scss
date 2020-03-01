@@ -1,6 +1,10 @@
 .services {
     // box model
-    padding: 100px 235px;
+    padding: 70px 25px;
+    @include atDesktopM {
+        // box model
+        padding: 100px 235px;
+    }
 }
 
 .services__header {
@@ -11,16 +15,28 @@
 .services__content {
     // box model
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    
+    @include atTablet {
+        // box model
+        flex-direction: row;
+    }
 }
 
 .services__item {
     // box model
     max-width: 345px;
+    margin-bottom: 50px;
 
     // typography
     text-align: center;
+
+    @include atDesktopS {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 .sevices__logo {
