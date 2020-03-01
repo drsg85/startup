@@ -1,6 +1,10 @@
 .stuff-member {
     // positioning
     position: relative;
+
+    // box model
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .stuff-member__photo {
