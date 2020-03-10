@@ -54,7 +54,7 @@
     }
 }
 
-.aboutus__stuff {
+.aboutus__staff {
     // positioning
     position: relative;
 
@@ -64,6 +64,9 @@
     margin-left: -15px;
     margin-right: -15px;
     max-width: 1140px;
+
+    // visual
+    overflow: hidden;
 }
 
 .aboutus__arrow-left {
@@ -108,4 +111,10 @@
     background-image: url('./img/icons/next.svg');
     background-repeat: no-repeat;
     transition: all ease-in-out 0.2s;
+}
+
+.my-slider__nav {
+    // positioning
+    position: relative;
+    top: -200px;
 }

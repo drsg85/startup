@@ -1,4 +1,4 @@
-.stuff-member {
+.staff-member {
     // positioning
     position: relative;
 
@@ -7,32 +7,36 @@
     margin-right: 15px;
 }
 
-.stuff-member__photo {
+.staff-member__photo {
     // box model
     max-width: 265px;
     width: 100%;
+    height: 250px;
     margin-bottom: 20px;
 }
 
-.stuff-member__photo img {
+.staff-member__photo img {
     // box model
     width: 100%;
     height: 100%;
+
+    // visual
+    object-fit: cover;
 }
 
-.stuff-member__socials {
-
-}
-
-.stuff-member__social {
-
-}
-
-.stuff-member__data {
+.staff-member__socials {
 
 }
 
-.stuff-member__name {
+.staff-member__social {
+
+}
+
+.staff-member__data {
+
+}
+
+.staff-member__name {
     // box model
     margin: 0;
     margin-bottom: 15px;
@@ -45,7 +49,7 @@
     text-transform: uppercase;
 }
 
-.stuff-member__position {
+.staff-member__position {
     // box model
     margin: 0;
 
