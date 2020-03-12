@@ -1,1 +1,2 @@
-1. Refactor mobile menu, ,ake desktop version with flex
+1. Refactor mobile menu, make desktop version with flex
+2. Think about better naming in aboutus section
