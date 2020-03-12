@@ -13,18 +13,19 @@ if(document.querySelector('.aboutus__staff')) {
         container: '.my-slider',
         mode: "carousel",
         items: 1,
-        fixedHeight: 250,
         controls: true,
         nav: false,
         controlsContainer: '.my-slider__nav',
+        fixedWidth: 265,
+        gutter: 10,
         responsive: {
           640: {
-            items: 2
+            items: 2,
+            gutter: 25
           },
           700: {
           },
           900: {
-            fixedWidth: 265,
             items: 4
           }
         }
