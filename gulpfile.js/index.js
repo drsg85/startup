@@ -2,7 +2,7 @@
 
 const gulp = require('gulp');
 const pug = require('gulp-pug');
-const htmlBeautify = require('gulp-html-beautify');
+// const htmlBeautify = require('gulp-html-beautify');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const csso = require('gulp-csso');
@@ -56,7 +56,7 @@ const webpackConfig = {
 let pugRender = () => (
   gulp.src(dirs.pug)
     .pipe(pug())
-    .pipe(htmlBeautify())
+    // .pipe(htmlBeautify())
     .pipe(gulp.dest(dirs.dist))
 );
 

@@ -18,6 +18,7 @@ if(document.querySelector('.aboutus__staff')) {
         controlsContainer: '.my-slider__nav',
         fixedWidth: 265,
         gutter: 10,
+        mouseDrag: true,
         responsive: {
           640: {
             items: 2,
