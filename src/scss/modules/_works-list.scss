@@ -16,6 +16,11 @@
     // visual
     list-style-type: none;
     transition: all ease-in-out 0.2s;
+
+    &--active {
+        // typography
+        color: $red;
+    }
 }
 
 .works-list__item:hover {

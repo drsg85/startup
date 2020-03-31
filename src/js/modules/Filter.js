@@ -2,32 +2,32 @@
 
 class Filter {
     constructor () {
-        const listItems = document.querySelectorAll('.works-list__item');
-        const allimages = document.querySelectorAll('.gallery__item');
+        const worksMenuItem = document.querySelectorAll('.works-list__item');
+        const worksItem = document.querySelectorAll('.gallery__item');
 
         function toggleActiveClass(active){
-            listItems.forEach(item => {
-              item.classList.remove('active');
+            worksMenuItem.forEach(item => {
+              item.classList.remove('works-list__item--active');
             })
-            active.classList.add('active');
+            active.classList.add('works-list__item--active');
         }
          
         function toggleimages(dataClass){
             if(dataClass === 'all'){
-                for(let i = 0; i<allimages.length; i++){
-                    allimages[i].style.display = 'block';
+                for(let i = 0; i<worksItem.length; i++){
+                    worksItem[i].style.display = 'block';
                 }
             }else{
-                for(let i = 0; i<allimages.length; i++)
-                    allimages[i].dataset.class === dataClass ? allimages[i].style.display = 'block' : allimages[i].style.display = 'none';
+                for(let i = 0; i<worksItem.length; i++)
+                worksItem[i].dataset.class === dataClass ? worksItem[i].style.display = 'block' : worksItem[i].style.display = 'none';
             }
         }
-         
-        for(let i = 0; i < listItems.length; i++){
-            console.log(listItems);
-            listItems[i].addEventListener('click', function(){
-                toggleActiveClass(listItems[i]);
-                toggleimages(listItems[i].dataset.class);
+
+        for(let i = 0; i < worksMenuItem.length; i++){
+            console.log(worksMenuItem);
+            worksMenuItem[i].addEventListener('click', function(){
+                toggleActiveClass(worksMenuItem[i]);
+                toggleimages(worksMenuItem[i].dataset.class);
             });
         }
     }
