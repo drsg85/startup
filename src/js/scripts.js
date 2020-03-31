@@ -1,9 +1,11 @@
 'use strict';
 import MobileMenu from './modules/MobileMenu';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
+import Filter from './modules/Filter';
 // import ToTop from './modules/toTop';
 
 const mobileMenu = new MobileMenu();
+const filter = new Filter();
 
 
 // new ToTop();

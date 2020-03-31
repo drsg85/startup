@@ -179,18 +179,74 @@ html(lang="en")
                 
                 .works__content
                     nav.works__menu
-                        ul.works__menu-nav
-                            li.works__menu-item All
-                            li.works__menu-item Branding
-                            li.works__menu-item Design
-                            li.works__menu-item Development
-                            li.works__menu-item Strategy
+                        ul.works-list
+                            li.works-list__item(data-class='all') All
+                            li.works-list__item(data-class='brand') Branding
+                            li.works-list__item(data-class='design') Design
+                            li.works-list__item(data-class='dev') Development
+                            li.works-list__item(data-class='strategy') Strategy
 
                     .works__gallery
                         .gallery
-                            .gallery__item
+                            .gallery__item(data-class='brand')
                                 .gallery__image
-                                    img(src="", alt="")
+                                    img(src="./img/gallery/hairdresser.jpg", alt="")
+                                .gallery__caption
+                                    h3.gallery__title Hair Dresser
+                                    p.gallery__category Branding
+                                    a.gallery__button(href="") View
+
+                            .gallery__item(data-class='design')
+                                .gallery__image
+                                    img(src="./img/gallery/pigeon.jpg", alt="")
+                                .gallery__caption
+                                    h3.gallery__title Hair Dresser
+                                    p.gallery__category Branding
+                                    a.gallery__button(href="") View
+
+                            .gallery__item(data-class='brand')
+                                .gallery__image
+                                    img(src="./img/gallery/notebook.jpg", alt="")
+                                .gallery__caption
+                                    h3.gallery__title Hair Dresser
+                                    p.gallery__category Branding
+                                    a.gallery__button(href="") View
+
+                            .gallery__item(data-class='dev')
+                                .gallery__image
+                                    img(src="./img/gallery/camera.jpg", alt="")
+                                .gallery__caption
+                                    h3.gallery__title Hair Dresser
+                                    p.gallery__category Branding
+                                    a.gallery__button(href="") View
+
+                            .gallery__item(data-class='strategy')
+                                .gallery__image
+                                    img(src="./img/gallery/bycicle.jpg", alt="")
+                                .gallery__caption
+                                    h3.gallery__title Hair Dresser
+                                    p.gallery__category Branding
+                                    a.gallery__button(href="") View
+
+                            .gallery__item(data-class='design')
+                                .gallery__image
+                                    img(src="./img/gallery/notes.jpg", alt="")
+                                .gallery__caption
+                                    h3.gallery__title Hair Dresser
+                                    p.gallery__category Branding
+                                    a.gallery__button(href="") View
+
+                            .gallery__item(data-class='dev')
+                                .gallery__image
+                                    img(src="./img/gallery/table.jpg", alt="")
+                                .gallery__caption
+                                    h3.gallery__title Hair Dresser
+                                    p.gallery__category Branding
+                                    a.gallery__button(href="") View
+
+                            .gallery__item(data-class='strategy')
+                                .gallery__image
+                                    img(src="./img/gallery/envelope.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Hair Dresser
                                     p.gallery__category Branding
@@ -198,63 +254,7 @@ html(lang="en")
 
                             .gallery__item
                                 .gallery__image
-                                    img(src="", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button(href="") View
-
-                            .gallery__item
-                                .gallery__image
-                                    img(src="", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button(href="") View
-
-                            .gallery__item
-                                .gallery__image
-                                    img(src="", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button(href="") View
-
-                            .gallery__item
-                                .gallery__image
-                                    img(src="", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button(href="") View
-
-                            .gallery__item
-                                .gallery__image
-                                    img(src="", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button(href="") View
-
-                            .gallery__item
-                                .gallery__image
-                                    img(src="", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button(href="") View
-
-                            .gallery__item
-                                .gallery__image
-                                    img(src="", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button(href="") View
-
-                            .gallery__item
-                                .gallery__image
-                                    img(src="", alt="")
+                                    img(src="./img/gallery/events.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Hair Dresser
                                     p.gallery__category Branding
@@ -392,6 +392,9 @@ html(lang="en")
                                 a.socials__icon(href="").social-icon--vk
 
                     p.footer__copyright © 2020 Startup, Designed by ShapedTheme
+
+            .container
+                .item
 
 
         script(src="scripts.js")

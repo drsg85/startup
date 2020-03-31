@@ -1,0 +1,15 @@
+.works {
+    @include atDesktopM {
+        // box model
+        padding: 0 235px;
+    }
+}
+
+.works__content {
+
+}
+
+.works__menu {
+    // box model
+    margin-bottom: 70px;
+}
