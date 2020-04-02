@@ -12,7 +12,7 @@ class Filter {
             active.classList.add('works-list__item--active');
         }
          
-        function toggleimages(dataClass){
+        function toggleItems(dataClass){
             if(dataClass === 'all'){
                 for(let i = 0; i<worksItem.length; i++){
                     worksItem[i].style.display = 'block';
@@ -24,10 +24,9 @@ class Filter {
         }
 
         for(let i = 0; i < worksMenuItem.length; i++){
-            console.log(worksMenuItem);
             worksMenuItem[i].addEventListener('click', function(){
                 toggleActiveClass(worksMenuItem[i]);
-                toggleimages(worksMenuItem[i].dataset.class);
+                toggleItems(worksMenuItem[i].dataset.class);
             });
         }
     }

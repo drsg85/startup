@@ -1,9 +1,15 @@
 .gallery {
     // box model
     display: grid;
-    grid-gap: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1rf 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    // grid-template-rows: 1rf 1fr 1fr;
+    
+    @include atTablet {
+        // box model
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+    }
 }
 
 .gallery__item {
@@ -11,14 +17,44 @@
     position: relative;
 }
 
+.gallery__item::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    // box model
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    // visual
+    background-color: rgba($red, 0.6);
+}
+
+.gallery__item:hover .gallery__caption {
+    // box model
+    display: block;
+}
+
+.gallery__item:hover::after {
+    // box model
+    display: block;
+}
+
 .gallery__image {
     // box model
+    width: 100%;
+    height: 100%;
     max-width: 360px;
     max-height: 320px;
 }
 
 .gallery__image img {
     // box model
+    display: block;
     width: 100%;
     height: 100%;
 
@@ -29,83 +65,111 @@
 .gallery__caption {
     // positioning
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+
+    // box model
+    display: none;
+
+    // typography
+    text-align: center;
 }
 
 .gallery__title {
     // box model
     margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $light;
+    font-family: $titleFont;
+    font-size: 0.85rem;
+    font-weight: normal;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 20px;
+        
+        // typography
+        font-size: 1.125rem;
+    }
 }
 
 .gallery__category {
     // box model
     margin: 0;
+    margin-bottom: 15px;
+    
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.7rem;
+    
+    @include atTablet {
+        // box model
+        margin-bottom: 30px;
+        
+        // typography
+        font-size: 0.75rem;
+    }
 }
 
 .gallery__button {
+    // positioning
+    position: relative;
+    padding: 5px 8px;
+    padding-right: 10px;
+
     // box model
-    margin: 0;
+    display: block;
+    margin: 0 auto;
+    width: 78px;
+    
+    // typography
+    background-color: $light;
+    color: rgba($red, 0.6);
+    font-family: $mainFont;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    @include atTablet {
+        // box model
+        width: 100px;
+        padding: 15px 20px;
+        padding-right: 40px;
+        
+        // typography
+        font-size: 0.875rem;
+    }
 }
 
-.container {
-    position: relative;
-    width: 210px;
-    height: 115px;
-    border: 1px solid #000;
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-bottom: 200px;
-  }
-
-  .container::before {
-      content: "";
-    
-      display: block;
-      position: absolute;
-      left: -15px;
-      top: -20px;
-      width: 40px;
-      height: 40px;
-      border: 1px solid #000;
-      border-bottom: none;
-      border-right: none;
-  }
-
-  .container::after {
-      content: "";
-
-      display: block;
-      position: absolute;
-      right: -15px;
-      top: -20px;
-      width: 40px;
-      height: 40px;
-      border: 1px solid #000;
-      border-bottom: none;
-      border-left: none;
-  }
-
-  .item {
-    position: absolute;
-    left: -15px;
-    bottom: -20px;
-    width: 40px;
-    height: 40px;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-  }
-
-  .item::after {
+.gallery__button::after {
     content: "";
 
-    display: block;
+    // positioning
     position: absolute;
-    right: -200px;
-    top: -0;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000;
-    border-top: none;
-    border-left: none;
-  }
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    // box model
+    display: block;
+    width: 15px;
+    height: 7px;
+
+    // visual
+    background-image: url('./img/icons/next-red.svg');
+    background-repeat: no-repeat;
+
+    @include atTablet {
+        // positioning
+        right: 10px;
+
+        // box model
+        width: 20px;
+        height: 10px;
+    }
+}

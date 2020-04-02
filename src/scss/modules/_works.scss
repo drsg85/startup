@@ -1,4 +1,7 @@
 .works {
+    // box model
+    padding: 0 25px;
+    
     @include atDesktopM {
         // box model
         padding: 0 235px;
