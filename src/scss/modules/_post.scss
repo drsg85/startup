@@ -1,0 +1,65 @@
+.post {
+    // box model
+    display: flex;
+}
+
+.post__image {
+
+}
+
+.post__image img {
+    // box model
+    width: 100%;
+    height: 100%;
+}
+
+.post__content {
+
+}
+
+.post__header {
+    // box model
+    display: flex;
+}
+
+.post__date {
+
+}
+
+.post__date-number {
+    // box model
+    margin: 0;
+}
+
+.post__date-month {
+    // box model
+    margin: 0;
+}
+
+.post__caption {
+
+}
+
+.post__title {
+    // box model
+    margin: 0;
+}
+
+.post__author {
+    // box model
+    margin: 0;
+}
+
+.post__author span {
+
+}
+
+.post__text {
+    // box model
+    margin: 0;
+}
+
+.post__button {
+    // box model
+    margin: 0;
+}

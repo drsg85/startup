@@ -1,6 +1,4 @@
-.works {
-    // box model
-    margin-bottom: 100px;
+.blog {
     padding: 0 25px;
 
     @include atDesktopM {
@@ -9,11 +7,15 @@
     }
 }
 
-.works__content {
+.blog__header {
+    // box model
+    margin-bottom: 70px;
+}
+
+.blog__content {
 
 }
 
-.works__menu {
-    // box model
-    margin-bottom: 70px;
+.blog__post {
+
 }
