@@ -1,0 +1,47 @@
+.contactus {
+    // box model
+    margin-bottom: 100px;
+    padding: 0 25px;
+
+    @include atDesktopM {
+        // box model
+        padding: 0 235px;
+    }
+}
+
+.contactus__header {
+    // box model
+    margin-bottom: 70px;
+}
+
+.contactus__content {
+    // box model
+    display: flex;
+}
+
+.contactus__data {
+
+}
+
+.contactus__data-item {
+
+}
+
+.contactus__data-title {
+    // box model
+    margin: 0;
+}
+
+.contactus__data-content {
+    // box model
+    margin: 0;
+}
+
+.contactus__form {
+
+}
+
+
+.contactus__footer {
+
+}
