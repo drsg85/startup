@@ -1,65 +1,171 @@
 .post {
     // box model
     display: flex;
+    flex-direction: column;
+    margin-bottom: 39px;
+
+    @include atDesktopS {
+        flex-direction: row;
+    }
+}
+
+.post:first-child {
+    // box model
+    padding-bottom: 35px;
+
+    // visual
+    border-bottom: 1px solid rgba($grey, 0.3);
 }
 
 .post__image {
+    // box model
+    max-width: 360px;
+    max-height: 320px;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
 
+    @include atTablet {
+        // box model
+        max-width: 400px;
+    }
+    
+    @include atDesktopS {
+        // box model
+        max-width: 460px;
+        margin-bottom: 0;
+    }
 }
 
 .post__image img {
     // box model
+    display: block;
     width: 100%;
     height: 100%;
+
+    // visual
+    object-fit: cover;
 }
 
 .post__content {
+    // box model
 
+    @include atDesktopS {
+        // box model
+        margin-left: 40px;
+    }
 }
 
 .post__header {
     // box model
     display: flex;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 .post__date {
+    // box model
+    padding: 20px;
 
+    // visual
+    border: 2px solid $grey;
+
+    // typography
+    letter-spacing: 3px;
+    text-align: center;
 }
 
 .post__date-number {
     // box model
     margin: 0;
+    margin-bottom: 10px;
+
+    // typography
+    color: $grey;
+    font-family: $titleFont;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 20px;
 }
 
 .post__date-month {
     // box model
     margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $titleFont;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .post__caption {
-
+    // box model
+    margin-left: 30px;
 }
 
 .post__title {
     // box model
     margin: 0;
+    margin-bottom: 20px;
+
+    // typography
+    color: $red;
+    font-family: $titleFont;
+    font-size: 1rem;
+    line-height: 24px;
+    text-transform: uppercase;
 }
 
 .post__author {
     // box model
     margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.8125rem;
+    line-height: 24px;
 }
 
 .post__author span {
-
+    // typography
+    color: $red;
 }
 
 .post__text {
     // box model
     margin: 0;
+    margin-bottom: 35px;
+    max-width: 635px;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.875rem;
+    line-height: 24px;
 }
 
 .post__button {
     // box model
     margin: 0;
+
+    // typography
+    color: $red;
+    font-family: $mainFont;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    // visual
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+
+.post__button:hover {
+    // typography
+    color: rgba($red, 0.6);
 }

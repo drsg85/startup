@@ -1,4 +1,5 @@
 .blog {
+    margin-bottom: 100px;
     padding: 0 25px;
 
     @include atDesktopM {
@@ -13,9 +14,5 @@
 }
 
 .blog__content {
-
-}
-
-.blog__post {
 
 }
