@@ -1,19 +1,154 @@
 .contactus-form {
+    @include atDesktopM {
+        // box model
+        margin-left: 20px;
+    }
 
+    @include atDesktopL {
+        // box model
+        margin-left: 0;
+    }
 }
 
 .contactus-form__content {
-
+    // box model
+    margin-bottom: 20px;
 }
 
 .contactus-form__group {
-
+    // box model
+    display: flex;
+    justify-content: space-between;
 }
 
 .contactus-form__input {
+    // box model
+    max-width: 150px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.75rem;
 
+    @include atTablet {
+        // box model
+        max-width: 230px;
+    }
+
+    @include atDesktopS {
+        // box model
+        max-width: 280px;
+    }
+
+    @include atDesktopM {
+        // box model
+        max-width: 265px;
+    }
+    
+    @include atDesktopL {
+        // box model
+        max-width: 350px;
+
+    }
+
+    &:focus {
+        // visual
+        outline-color: $red;
+    }
+
+    &::placeholder {
+        // typography
+        text-transform: uppercase;
+    }
+}
+
+.contactus-form__text {
+    // box model
+    height: 100px;
+    max-width: 730px;
+    width: 100%;
+    padding-left: 15px;
+    padding-top: 15px;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+
+    // visual
+    resize: none;
+
+    &:focus {
+        // visual
+        outline-color: $red;
+    }
+
+    &::placeholder {
+        // typography
+        text-transform: uppercase;
+    }
 }
 
 .contactus-form__check {
-    
+
+}
+
+.contactus-form__footer {
+    // box model
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+    }
+}
+
+.contactus-form__button {
+    // box model
+    margin-bottom: 20px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
+}
+
+.contactus-form__footer .button {
+    // typography
+    color: $grey;
+
+    // visual
+    background-color: transparent;
+    border: 1px solid $grey;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.contactus-form__footer .button:hover {
+    // typography
+    color: $light;
+
+    // visual
+    background-color: $red;
+}
+
+.contactus-form__details {
+    // box model
+    margin: 0;
+    margin-left: 35px;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+}
+
+.contactus-form__details span {
+    // typography
+    color: $red;
 }

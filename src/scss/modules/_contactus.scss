@@ -3,6 +3,11 @@
     margin-bottom: 100px;
     padding: 0 25px;
 
+    @include atDesktopS {
+        // box model
+        padding-left: 55px;
+    }
+
     @include atDesktopM {
         // box model
         padding: 0 235px;
@@ -17,31 +22,114 @@
 .contactus__content {
     // box model
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+    }
 }
 
 .contactus__data {
+    // box model
+    margin-left: auto;
+    margin-right: auto;
 
+    @include atDesktopS {
+        // box model
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .contactus__data-item {
+    // positioning
+    position: relative;
 
+    // box model
+    max-width: 210px;
+    margin-bottom: 40px;
+}
+
+.contactus__data-item::before {
+    content: "";
+
+    // positioning
+    position: absolute;
+    left: -30px;
+    top: 10px;
+
+    // box model
+    display: block;
+    width: 15px;
+    height: 20px;
+
+    // visual
+    background-image: url('./img/address.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.contactus__data-item--hotline::before {
+    // visual
+    background-image: url('./img/hotline.png');
+}
+
+.contactus__data-item--email::before {
+    // visual
+    background-image: url('./img/email.png');
 }
 
 .contactus__data-title {
     // box model
     margin: 0;
+    // margin-bottom: 20px;
+
+    // typography
+    color: $grey;
+    font-family: $titleFont;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
 }
 
 .contactus__data-content {
     // box model
     margin: 0;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: left;
+
+    // visual
+    text-decoration: none;
 }
 
 .contactus__form {
+    // box model
+    max-width: 400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
-}
+    @include atTablet {
+        // box model
+        max-width: 500px;
+    }
 
+    @include atDesktopS {
+        max-width: 600px;
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-.contactus__footer {
-
+    @include atDesktopL {
+        // box model
+        max-width: 730px;
+    }
 }
