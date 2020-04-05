@@ -1,0 +1,43 @@
+.footer {
+    // box model
+    padding: 100px 0;
+
+    // visual
+    background-color: $red;
+}
+
+.footer__content {
+    // box model
+
+}
+
+.footer__socials {
+    // box model
+    margin-bottom: 30px;
+}
+
+.footer__socials::after {
+    content: "";
+
+    // box model
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+    // visual
+    background-color: $light;
+}
+
+.footer__copyright {
+    // box model
+    margin: 0;
+
+    // typography
+    color: $light;
+    font-family: $mainFont;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}

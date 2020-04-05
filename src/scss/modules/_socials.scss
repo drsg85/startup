@@ -1,0 +1,42 @@
+.socials {
+    // box model
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.socials__item {
+    // box model
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    
+    // visual
+    list-style-type: none;
+}
+
+.socials__icon {
+    // box model
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // typography
+    color: $light;
+
+    // visual
+    border: 1px solid $light;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+
+.socials__icon:hover {
+    // typography
+    color: $red;
+
+    // visual
+    background-color: $light;
+}
