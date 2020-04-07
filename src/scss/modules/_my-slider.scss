@@ -1,0 +1,44 @@
+.my-slider__nav {
+    // positioning
+    position: relative;
+    top: -200px;
+}
+
+.my-slider__arrow {
+    // positioning
+    position: absolute;
+
+    // box model
+    width: 35px;
+    height: 35px;
+
+    // visual
+    background-color: rgba($grey, 0.3);
+    background-repeat: no-repeat;
+    border: none;
+    transition: all ease-in-out 0.2s;
+
+    &--left {
+        // positioning
+        left: 0;
+        top: 35%;
+
+        // visual
+        background-image: url('./img/icons/back.svg');
+    }
+
+    &--right {
+        // positioning
+        right: 0;
+        top: 35%;
+
+        // visual
+        background-image: url('./img/icons/next.svg');
+    }
+}
+
+.my-slider__arrow:hover {
+    // visual
+    background-color: $red;
+    cursor: pointer;
+}

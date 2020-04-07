@@ -2,13 +2,14 @@
 import MobileMenu from './modules/MobileMenu';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
 import Filter from './modules/Filter';
-// import ToTop from './modules/toTop';
+import ToTop from './modules/toTop';
+import SmoothOnAnchors from './modules/smoothOnAnchors';
 
 const mobileMenu = new MobileMenu();
 const filter = new Filter();
 
+new ToTop();
 
-// new ToTop();
 
 if(document.querySelector('.aboutus__staff')) {
     const slider = new tns({
@@ -62,3 +63,6 @@ if(document.querySelector('.clients__slider')) {
         }
       });
 }
+
+
+new SmoothOnAnchors();
