@@ -1,6 +1,9 @@
 .works {
     // box model
+    max-width: 1600px;
     margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 25px;
 
     @include atDesktopM {
