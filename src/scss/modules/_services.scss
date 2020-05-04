@@ -29,6 +29,7 @@
     @include atTablet {
         // box model
         flex-direction: row;
+        align-items: unset;
     }
 }
 
@@ -56,24 +57,20 @@
     // visual
     border: 2px solid rgba($grey, 0.2);
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 
     &--item-1 {
         background-color: $red;
         background-image: url('./img/letter.png');
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
     }
 
     &--item-2 {
         background-image: url('./img/symbol.png');
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
     }
 
     &--item-3 {
         background-image: url('./img/round.png');
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
     }
 }
 
