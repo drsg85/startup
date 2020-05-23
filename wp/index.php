@@ -64,7 +64,6 @@
     </div>
 </section>
 
-
 <section class="aboutus" id="aboutus">
     <div class="aboutus__container">
         <div class="aboutus__header">
@@ -151,6 +150,7 @@
     </div>
     <div class="banner__button"><a class="button smooth-trigger" href="#contact"><?php the_field('banner_button'); ?></a></div>
 </section>
+
 <section class="blog" id="blog">
     <div class="blog__header">
         <header class="section-header">
@@ -158,57 +158,46 @@
             <p class="section-header__subtitle"><?php the_field('fourth-section__subtitle'); ?></p>
         </header>
     </div>
+
     <div class="blog__content">
-
-
-
         <?php 
-        query_posts( 'post_type=post' );
-        
-        if (have_posts()) { while (have_posts()) {the_post(); ?>
-            <article class="post">
-                <div class="post__image"><?php the_post_thumbnail( 'full' ) ?></div>
-                <div class="post__content">
-                    <div class="post__header">
-                        <div class="post__date">
-                            <!-- <p class="post__date-number">18</p>
-                            <p class="post__date-month">Oct</p> -->
-                            <time class="post__time" datetime="2020-01-01T12:50"><?php the_time('F jS, Y') ?></time>
-                        </div>
-                        <div class="post__caption">
-                            <h4 class="post__title"><?php the_title() ?></h4>
-                            <p class="post__author">By <span>Khalil</span> Uddin in <span>Development</span></p>
-                        </div>
-                    </div>
-                    <p class="post__text"><?php the_excerpt() ?></p><a class="post__button smooth-trigger" href="index.html">Read more</a>
-                </div>
-            </article>
-            <?php }
-        }   ?>
-
-        <!-- <article class="post">
-            <div class="post__image"><img src="./img/post-image2.jpg" alt="Изображение картинки из блока" /></div>
+        $args = array('post_type' => 'post');
+        $lastposts = get_posts($args);
+        foreach($lastposts as $post) {
+            setup_postdata($post);
+            ?><article class="post">
+            <div class="post__image"><?php the_post_thumbnail( 'full' ) ?></div>
             <div class="post__content">
                 <div class="post__header">
                     <div class="post__date">
-                        <p class="post__date-number">18</p>
-                        <p class="post__date-month">Oct</p>
+                        <!-- <p class="post__date-number">18</p>
+                        <p class="post__date-month">Oct</p> -->
+                        <time class="post__time" datetime="2020-01-01T12:50"><?php the_time('F jS, Y') ?></time>
                     </div>
                     <div class="post__caption">
-                        <h4 class="post__title">Using interface desigining elements</h4>
-                        <p class="post__author">By <span>Khalil</span> Uddin in <span>Development</span></p>
+                        <h4 class="post__title"><?php the_title() ?></h4>
+                        <!-- <p class="post__author">By <span>Khalil</span> Uddin in <span>Development</span></p> -->
                     </div>
                 </div>
-                <p class="post__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor idunt ut labore et dolore aliquyam</p><a class="post__button smooth-trigger" href="index.html">Read more</a>
+                <p class="post__text"><?php the_content() ?></p><a class="post__button smooth-trigger" href="index.html">Read more</a>
             </div>
-        </article> -->
+        </article><?php
+                
+        }
+        wp_reset_postdata();
+        ?>
     </div>
 </section>
+
 <section class="clients" id="clients">
     <div class="clients__container">
         <ul class="clients__list">
 
-        <?php if( have_rows('fifth_section_images') ): while ( have_rows('fifth_section_images') ) : the_row(); ?>
+        <?php 
+
+        query_posts( 'post_type=any' );
+
+        if( have_rows('fifth_section_images') ): while ( have_rows('fifth_section_images') ) : the_row(); ?>
 
         <li class="clients__brand"><a class="clients__item" href="<?php the_sub_field('fifth_section_link'); ?>"><img src="<?php the_sub_field('fifth_section_image'); ?>" alt="Логотип бренда deorham" /></a></li>
 
@@ -224,13 +213,12 @@
                 <p class="clients__name"><?php the_sub_field('fifth_slider_signature'); ?></p>
                 </div>
                 <?php endwhile; endif; ?>
-
-                
             </div>
             <div class="clients__dots"><button class="clients__dots-item"></button><button class="clients__dots-item"></button><button class="clients__dots-item"></button></div>
         </div>
     </div>
 </section>
+
 <section class="contactus" id="contact">
     <div class="contactus__header">
         <header class="section-header">
@@ -252,10 +240,10 @@
             </div>
         </div>
         <div class="contactus__form">
-            <form class="contactus-form form" id="contactus-form" action="">
+            <form class="contactus-form form" id="contactus-form" action="mail.php" method="POST">
                 <div class="contactus-form__content">
-                    <div class="contactus-form__group"><input class="contactus-form__input" type="text" name="fullname" placeholder="Your name" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" /><input class="contactus-form__input" type="text" name="subject" placeholder="Your subject" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" /></div>
-                    <div class="contactus-form__group"><input class="contactus-form__input" type="email" name="email" placeholder="Your e-mail" required="required" /><input class="contactus-form__input" type="text" name="company" placeholder="Company name" /></div><textarea class="contactus-form__text" name="text" cols="30" rows="10" placeholder="Write your message" required="required"></textarea>
+                    <div class="contactus-form__group"><input class="contactus-form__input" type="text" name="user_name" placeholder="Your name" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" /><input class="contactus-form__input" type="text" name="user_subject" placeholder="Your subject" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" /></div>
+                    <div class="contactus-form__group"><input class="contactus-form__input" type="email" name="user_email" placeholder="Your e-mail" required="required" /><input class="contactus-form__input" type="text" name="user_company" placeholder="Company name" /></div><textarea class="contactus-form__text" name="user_text" cols="30" rows="10" placeholder="Write your message" required="required"></textarea>
                 </div>
                 <div class="contactus-form__footer">
                     <div class="contactus-form__button"><input class="contactus-form__submit button" type="submit" value="Send messsage" /></div>
