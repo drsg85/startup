@@ -240,7 +240,7 @@
             </div>
         </div>
         <div class="contactus__form">
-            <form class="contactus-form form" id="contactus-form" action="mail.php" method="POST">
+            <form class="contactus-form form" id="contactus-form" action="">
                 <div class="contactus-form__content">
                     <div class="contactus-form__group"><input class="contactus-form__input" type="text" name="user_name" placeholder="Your name" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" /><input class="contactus-form__input" type="text" name="user_subject" placeholder="Your subject" required="required" pattern="^[A-z|А-я][a-z|а-я]{2,}$" /></div>
                     <div class="contactus-form__group"><input class="contactus-form__input" type="email" name="user_email" placeholder="Your e-mail" required="required" /><input class="contactus-form__input" type="text" name="user_company" placeholder="Company name" /></div><textarea class="contactus-form__text" name="user_text" cols="30" rows="10" placeholder="Write your message" required="required"></textarea>
