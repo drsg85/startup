@@ -4,11 +4,15 @@ import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.js';
 import Filter from './modules/Filter';
 import ToTop from './modules/toTop';
 import SmoothOnAnchors from './modules/smoothOnAnchors';
-// import SendForm from './modules/sendForm';
+import SendForm from './modules/sendForm';
 
 const mobileMenu = new MobileMenu();
 const filter = new Filter();
-// const sendForm = new SendForm();
+const sendForm = new SendForm({
+  form: ".contactus-form",
+  input: ".contactus-form__input",
+  submit: ".contactus-form__submit"
+});
 
 new ToTop();
 
