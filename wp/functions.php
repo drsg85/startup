@@ -7,6 +7,11 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 function theme_register_nav_menu() {
     register_nav_menu( 'top', 'Меню в шапке' );
     add_theme_support( 'post-thumbnails', array( 'post' ) );
+    add_filter( 'excerpt_more', 'new_excerpt_more' );
+    function new_excerpt_more($more) {
+        global $post;
+        return '<a href="'. get_permalink($post->ID) . '"Читать дальше...</a>';
+    }
 }
 
 function adding_styles() {

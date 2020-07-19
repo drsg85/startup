@@ -1,5 +1,5 @@
 <article class="post">
-    <div class="post__image"><?php the_post_thumbnail( 'full' ) ?></div>
+    <div class="post__image"><img src="<?php the_post_thumbnail( 'full' ) ?>" alt="Изображение картинки из блога" /></div>
     <div class="post__content">
         <div class="post__header">
             <div class="post__date">
