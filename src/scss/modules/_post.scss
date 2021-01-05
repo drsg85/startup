@@ -35,7 +35,7 @@
         // max-width: 460px;
         max-height: 320px;
         margin-bottom: 0;
-        flex-basis: 40%;
+        // flex-basis: 40%;
     }
 }
 
@@ -50,13 +50,25 @@
 }
 
 .post__content {
-    // box model
-
+    
     @include atDesktopS {
         // box model
         margin-left: 40px;
         flex-basis: 60%;
     }
+}
+
+.post__content p {
+    // box model
+    margin: 0;
+    margin-bottom: 35px;
+    max-width: 635px;
+
+    // typography
+    color: $grey;
+    font-family: $mainFont;
+    font-size: 0.875rem;
+    line-height: 24px;
 }
 
 .post__header {
@@ -78,7 +90,7 @@
     text-align: center;
 }
 
-.post__date-number {
+p.post__date-number {
     // box model
     margin: 0;
     margin-bottom: 10px;
@@ -91,7 +103,7 @@
     line-height: 20px;
 }
 
-.post__date-month {
+p.post__date-month {
     // box model
     margin: 0;
 
@@ -133,7 +145,7 @@
     text-transform: uppercase;
 }
 
-.post__author {
+p.post__author {
     // box model
     margin: 0;
 

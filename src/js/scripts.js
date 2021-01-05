@@ -10,7 +10,7 @@ const mobileMenu = new MobileMenu();
 const filter = new Filter();
 const sendForm = new SendForm({
   form: ".contactus-form",
-  input: ".contactus-form__input",
+  inputs: ".contactus-form__input",
   submit: ".contactus-form__submit"
 });
 

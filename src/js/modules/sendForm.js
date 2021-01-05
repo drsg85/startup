@@ -18,10 +18,10 @@ class SendForm {
         });
         let XHR = new XMLHttpRequest();
         //url for localhost dev
-        //let url = `${window.location.origin}/bw-re/post`;
+        let url = `${window.location.origin}/startup/testing-post`;
         
         //url for production
-        let url = `${window.location.origin}/post`;
+        // let url = `${window.location.origin}/post`;
         let jsonData = JSON.stringify(dataToSend);
         
         // const spinnerMail = new SpinnerMail().addEvents();
@@ -44,7 +44,7 @@ class SendForm {
                 }
             }
         };
-
+        console.log(dataToSend);
         XHR.send(jsonData);
     }
 
