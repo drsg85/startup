@@ -19,10 +19,10 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-cli": "^2.2.0",
+    "gulp-cli": "^2.3.0",
     "gulp-html-beautify": "^1.0.1",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "sass-module-importer": "^1.4.0",
     "webpack": "^4.42.0",
     "webpack-stream": "^5.2.1"
@@ -30,6 +30,6 @@
   "dependencies": {
     "browser-sync": "^2.26.13",
     "gulp-csso": "^4.0.1",
-    "tiny-slider": "^2.9.2"
+    "tiny-slider": "^2.9.3"
   }
 }

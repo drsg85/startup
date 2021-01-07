@@ -1,0 +1,72 @@
+.spinner-mail {
+    // box model
+    display: none;
+}
+
+.spinner-mail--active {
+    // positioning
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 123;
+
+    // box model
+    display: block;
+    height: #{$diameter}px;
+    width: #{$diameter}px;
+    margin-top: -#{$diameter/2}px;
+    margin-left: -#{$diameter/2}px;
+
+    // visual
+    background-color: #ffffff;
+    border: 3px solid #ec933e;
+    border-radius: 50%;
+    visibility: visible;
+    
+    &:before,
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+
+        // box model
+        display: block;
+        width: 3px;
+
+        // visual
+        background-color: #ec933e;
+        border-radius: 26px;
+        transform-origin: 50% 0%;
+    }
+
+    &:before {
+        // positioning
+        top: 50%;
+        left: 25px;
+
+        // box model
+        height: #{$radius - ($diameter/10)-(($diameter/10))}px;
+
+        // visual
+        animation: spin #{$time}ms linear infinite;
+    } 
+
+    &:after {
+        // positioning
+        top: 50%;
+        left: 25px;
+
+        // box model
+        height: #{$radius - ($diameter/10)}px;
+
+        // visual
+        animation: spin #{$time/4}ms linear infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
