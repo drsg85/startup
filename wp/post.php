@@ -134,7 +134,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" />
-        <title>Заявка Barber Wild</title>
+        <title>Заявка Startup</title>
     </head>
 
     <body>
@@ -146,7 +146,7 @@
                     <div class="common-popup-content__info">
                         <h2 class="common-popup-content__subtitle">Здравствуйте <?php echo $formName; ?></h2>
                         <p class="common-popup-content__text"> Ваше сообщение успешно отправлено. В ближайшее время наши менеджеры свяжутся с вами.
-                        <p class="common-popup-content__text">Спасибо за выбор компании Barber Wild.</p>
+                        <p class="common-popup-content__text">Спасибо за выбор компании Startup</p>
                     </div>
                 </div>
             </div>

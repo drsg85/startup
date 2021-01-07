@@ -11,7 +11,8 @@ const filter = new Filter();
 const sendForm = new SendForm({
   form: ".contactus-form",
   inputs: ".contactus-form__input",
-  submit: ".contactus-form__submit"
+  submit: ".contactus-form__submit",
+  popup: '.common-popup'
 });
 
 new ToTop();
