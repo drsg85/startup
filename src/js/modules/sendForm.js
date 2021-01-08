@@ -9,6 +9,7 @@ class SendForm {
         this.submit = document.querySelector(obj.submit);
         this.popup = new CommonPopup().addEvents().popup;
         this.overlay = new CommonPopup().addEvents().overlay;
+        this.textarea = document.querySelector('.contactus-form__text');
         this.events();
     }
 
@@ -19,6 +20,7 @@ class SendForm {
         this.elems.forEach((el) => {
             dataToSend[el.name] = el.value;
         });
+        dataToSend[this.textarea.name] = this.textarea.value;
         let XHR = new XMLHttpRequest();
         //url for localhost dev
         let url = `${window.location.origin}/startup/testing-post`;
@@ -30,7 +32,7 @@ class SendForm {
         const spinnerMail = new SpinnerMail().addEvents();
 
         this.form.appendChild(spinnerMail);
-        
+
         spinnerMail.classList.add('spinner-mail--active');
         
         XHR.open("POST", url, true);
