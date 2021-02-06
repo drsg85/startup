@@ -35,7 +35,7 @@
 
 .services__item {
     // box model
-    max-width: 345px;
+    width: 345px;
     margin-bottom: 50px;
 
     // typography
@@ -43,7 +43,7 @@
 
     @include atDesktopS {
         // box model
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
 }
 
@@ -59,6 +59,7 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: 60px 60px;
 
     &--item-1 {
         background-color: $red;
