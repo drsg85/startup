@@ -7,6 +7,8 @@ html(lang="en")
 
         link(rel="stylesheet", href="styles.css")
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+        //- link(rel="stylesheet", href="../../node_modules/glightbox/dist/css/glightbox.css")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
 
         title Startup
         
@@ -190,76 +192,61 @@ html(lang="en")
                     .works__gallery
                         .gallery
                             .gallery__item(data-class='brand')
-                                .gallery__image
+                                a(href="./img/gallery/hairdresser.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/hairdresser.jpg", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Hair Dresser
-                                    p.gallery__category Branding
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='design')
-                                .gallery__image
+                                a(href="./img/gallery/pigeon.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/pigeon.jpg", alt="")
-                                .gallery__caption
-                                    h3.gallery__title Pigeon
-                                    p.gallery__category Design
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='brand')
-                                .gallery__image
+                                a(href="./img/gallery/notebook.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/notebook.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Workflow
                                     p.gallery__category Branding
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='dev')
-                                .gallery__image
+                                a(href="./img/gallery/camera.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/camera.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Photo App's
                                     p.gallery__category Development
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='strategy')
-                                .gallery__image
+                                a(href="./img/gallery/bycicle.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/bycicle.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Improve yourself
                                     p.gallery__category Strategy
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='design')
-                                .gallery__image
+                                a(href="./img/gallery/notes.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/notes.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Your startup
                                     p.gallery__category Design
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='dev')
-                                .gallery__image
+                                a(href="./img/gallery/table.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/table.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title First steps
                                     p.gallery__category Development
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='strategy')
-                                .gallery__image
+                                a(href="./img/gallery/envelope.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/envelope.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Envelope
                                     p.gallery__category Strategy
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
                             .gallery__item(data-class='brand')
-                                .gallery__image
+                                a(href="./img/gallery/events.jpg" data-gallery="gallery1").glightbox
                                     img(src="./img/gallery/events.jpg", alt="")
                                 .gallery__caption
                                     h3.gallery__title Your calendar
                                     p.gallery__category Branding
-                                    a.gallery__button.smooth-trigger(href="index.html") View
 
 
             section.banner
@@ -406,5 +393,3 @@ html(lang="en")
 
 
         script(src="scripts.js")
-        script(src="main.js")
-        

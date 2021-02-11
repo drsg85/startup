@@ -56,7 +56,7 @@
 
     &:focus {
         // visual
-        outline-color: $red;
+        outline-color: #f2b979;
     }
 
     &::placeholder {
@@ -83,7 +83,7 @@
 
     &:focus {
         // visual
-        outline-color: $red;
+        outline-color: #f2b979;
     }
 
     &::placeholder {
@@ -134,7 +134,7 @@
     color: $light;
 
     // visual
-    background-color: $red;
+    background-color: #f2b979;
 }
 
 .contactus-form__details {
@@ -150,5 +150,5 @@
 
 .contactus-form__details span {
     // typography
-    color: $red;
+    color: #f2b979;
 }

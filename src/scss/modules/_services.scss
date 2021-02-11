@@ -30,6 +30,7 @@
         // box model
         flex-direction: row;
         align-items: unset;
+        flex-wrap: wrap;
     }
 }
 
@@ -43,7 +44,7 @@
 
     @include atDesktopS {
         // box model
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 }
 

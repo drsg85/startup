@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "browser-sync": "^2.26.13",
+    "glightbox": "^3.0.7",
     "gulp-csso": "^4.0.1",
     "tiny-slider": "^2.9.3"
   }
