@@ -19,3 +19,22 @@
     // visual
     background-color: #f2b979;
 }
+
+.button--popup {
+    // typography
+    color: $grey;
+
+    // visual
+    background-color: transparent;
+    border: 1px solid $grey;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.button--popup:hover {
+    // typography
+    color: $light;
+
+    // visual
+    background-color: #f2b979;
+}

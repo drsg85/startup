@@ -150,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            <a href="<?php echo esc_url(home_url('/')); ?>" class="button common-popup-content__close">Спасибо</a>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="button button--popup common-popup-content__close">Спасибо</a>
         </div>
     <?php else: ?>
         <h1>Sorry!</h1>

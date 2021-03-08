@@ -20,7 +20,7 @@ class SendForm {
         this.elems.forEach((el) => {
             dataToSend[el.name] = el.value;
         });
-        dataToSend[this.textarea.name] = this.textarea.value;
+        // dataToSend[this.textarea.name] = this.textarea.value;
         let XHR = new XMLHttpRequest();
         //url for localhost dev
         let url = `${window.location.origin}/startup/testing-post`;
