@@ -6,7 +6,6 @@ import ToTop from './modules/toTop';
 import SmoothOnAnchors from './modules/smoothOnAnchors';
 import SendForm from './modules/sendForm';
 import GLightbox from '../../node_modules/glightbox';
-import isEmail from '../../node_modules//lib/isEmail';
 
 const mobileMenu = new MobileMenu();
 const filter = new Filter();
@@ -18,8 +17,6 @@ const sendForm = new SendForm({
 });
 
 new ToTop();
-
-new isEmail();
 
 const lightbox = GLightbox( {
   selector: 'glightbox3',
