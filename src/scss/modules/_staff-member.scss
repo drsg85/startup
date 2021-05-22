@@ -21,33 +21,6 @@
     margin-bottom: 20px;
 }
 
-.staff-member__photo:hover::after {
-    // box model
-    display: block;
-}
-
-.staff-member__photo:hover .staff-member__socials{
-    // box model
-    display: flex;
-}
-
-.staff-member__photo::after {
-    content: "";
-
-    // positioning
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    // box model
-    display: none;
-    width: 100%;
-    height: 100%;
-
-    // visual
-    background-color: rgba($dark, 0.3);
-}
-
 .staff-member__photo img {
     // box model
     width: 100%;
@@ -55,21 +28,6 @@
 
     // visual
     object-fit: cover;
-}
-
-.staff-member__socials {
-    // positioning
-    position: absolute;
-    bottom: 30px;
-    z-index: 9;
-
-    // box model
-    display: none;
-    justify-content: center;
-}
-
-.staff-member__data {
-
 }
 
 .staff-member__name {
@@ -93,5 +51,6 @@
     color: $grey;
     font-family: $mainFont;
     font-size: 0.8rem;
+    line-height: 20px;
     text-align: center;
 }

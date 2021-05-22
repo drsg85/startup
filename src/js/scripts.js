@@ -6,6 +6,7 @@ import ToTop from './modules/toTop';
 import SmoothOnAnchors from './modules/smoothOnAnchors';
 import SendForm from './modules/sendForm';
 import GLightbox from '../../node_modules/glightbox';
+import isEmail from '../../node_modules//lib/isEmail';
 
 const mobileMenu = new MobileMenu();
 const filter = new Filter();
@@ -17,6 +18,8 @@ const sendForm = new SendForm({
 });
 
 new ToTop();
+
+new isEmail();
 
 const lightbox = GLightbox( {
   selector: 'glightbox3',
@@ -54,10 +57,13 @@ if(document.querySelector('.aboutus__staff')) {
         container: '.my-slider',
         mode: "carousel",
         items: 1,
-        controls: true,
+        controls: false,
         nav: false,
-        controlsContainer: '.my-slider__nav',
+        autoplayButtonOutput: false,
+        // controlsContainer: '.my-slider__nav',
         fixedWidth: 265,
+        autoplay: true,
+        speed: 300,
         gutter: 10,
         mouseDrag: true,
         responsive: {
@@ -79,9 +85,8 @@ if(document.querySelector('.clients__slider')) {
         container: '.clients-slider',
         mode: "carousel",
         items: 1,
-        // autoplay: true,
-        nav: true,
-        navContainer: '.clients__dots',
+        nav: false,
+        // navContainer: '.clients__dots',
         controls: false,
         autoplay: true,
         autoplayButtonOutput: false,

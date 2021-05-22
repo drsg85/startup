@@ -2,10 +2,12 @@
     // box model
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 39px;
 
     @include atDesktopS {
         flex-direction: row;
+        align-items: inherit;
     }
 }
 
@@ -56,6 +58,13 @@
         margin-left: 40px;
         flex-basis: 60%;
     }
+
+    ol {
+        color: $grey;
+        font-family: $mainFont;
+        font-size: 0.875rem;
+        line-height: 24px;
+    }
 }
 
 .post__content p {
@@ -75,7 +84,12 @@
     // box model
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 25px;
+
+    @include atDesktopS {
+        justify-content: inherit;
+    }
 }
 
 .post__date {

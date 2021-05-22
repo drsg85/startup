@@ -38,12 +38,14 @@
     // box model
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 50px;
 
     @include atDesktopS {
         // box model
         flex-direction: row;
         justify-content: space-between;
+        align-items: inherit;
         margin-bottom: 75px;
     }
 }
@@ -52,6 +54,8 @@
     // box model
     margin: 0;
     margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     max-width: 550px;
 
     // typography

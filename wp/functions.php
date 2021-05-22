@@ -16,7 +16,7 @@ function theme_register_nav_menu() {
 
 function adding_styles() {
     wp_enqueue_style( 'style', get_stylesheet_uri());
-    wp_enqueue_style( 'styles', get_template_directory_uri() . './assets/styles.css' );
+    wp_enqueue_style( 'styles', get_template_directory_uri() . 'http://drsg85.beget.tech/wp-content/themes/startup/assets/styles.css' );
 }
 
 function adding_scripts() {

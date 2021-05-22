@@ -23,10 +23,10 @@ class SendForm {
         // dataToSend[this.textarea.name] = this.textarea.value;
         let XHR = new XMLHttpRequest();
         //url for localhost dev
-        let url = `${window.location.origin}/startup/testing-post`;
+        // let url = `${window.location.origin}/startup/testing-post`;
         
         //url for production
-        // let url = `${window.location.origin}/post`;
+        let url = `${window.location.origin}/testing-post`;
         let jsonData = JSON.stringify(dataToSend);
         
         const spinnerMail = new SpinnerMail().addEvents();
